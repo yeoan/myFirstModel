@@ -28,8 +28,64 @@ FLAGS = flags.FLAGS
 
 # TO-DO replace this with label map
 def class_text_to_int(row_label):
-    if row_label == 4710594924427:
+    if row_label == 'object00':
         return 1
+    if row_label == 'object01':
+        return 2
+    if row_label == 'object02':
+        return 3
+    if row_label == 'object03':
+        return 4
+    if row_label == 'object04':
+        return 5
+    if row_label == 'object05':
+        return 6
+    if row_label == 'object06':
+        return 7
+    if row_label == 'object07':
+        return 8
+    if row_label == 'object08':
+        return 9
+    if row_label == 'object09':
+        return 10
+    if row_label == 'object10':
+        return 11
+    if row_label == 'object11':
+        return 12
+    if row_label == 'object12':
+        return 13
+    if row_label == 'object13':
+        return 14
+    if row_label == 'object14':
+        return 15
+    if row_label == 'object15':
+        return 16
+    if row_label == 'object16':
+        return 17
+    if row_label == 'object17':
+        return 18
+    if row_label == 'object18':
+        return 19
+    if row_label == 'object19':
+        return 20
+    if row_label == 'object20':
+        return 21
+    if row_label == 'object21':
+        return 22
+    if row_label == 'object22':
+        return 23
+    if row_label == 'object23':
+        return 24
+    if row_label == 'object24':
+        return 25
+    if row_label == 'object25':
+        return 26
+    if row_label == 'object26':
+        return 27
+    if row_label == 'object27':
+        return 28
+    if row_label == 'object28':
+        return 29   
     else:
         None
 
@@ -61,7 +117,7 @@ def create_tf_example(group, path):
         xmaxs.append(row['xmax'] / width)
         ymins.append(row['ymin'] / height)
         ymaxs.append(row['ymax'] / height)
-        classes_text.append(str(row['class']).encode('utf8'))
+        classes_text.append(row['class'].encode('utf8'))
         classes.append(class_text_to_int(row['class']))
 
     tf_example = tf.train.Example(features=tf.train.Features(feature={
