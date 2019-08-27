@@ -126,6 +126,7 @@ def get_inputs(input_queue,
   def extract_images_and_targets(read_data):
     """Extract images and targets from the input dict."""
     image = read_data[fields.InputDataFields.image]
+    print(image, "123")
     key = ''
     if fields.InputDataFields.source_id in read_data:
       key = read_data[fields.InputDataFields.source_id]
