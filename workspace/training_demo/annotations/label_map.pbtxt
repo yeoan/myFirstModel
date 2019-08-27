@@ -143,3 +143,8 @@ item {
     name: 'object28'
 }
 
+item {
+    id: 30
+    name: 'object29'
+}
+
