@@ -85,7 +85,9 @@ def class_text_to_int(row_label):
     if row_label == 'object27':
         return 28
     if row_label == 'object28':
-        return 29   
+        return 29
+    if row_label == 'object29':
+        return 30
     else:
         None
 
